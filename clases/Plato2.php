@@ -1,10 +1,13 @@
-<main>
-    <section>
-        <form action="" method="post">
-            <label for="plato2">Plato 2: </label>
-            <input type="text" name="plato2"> <br> <br>
+<section>
+<form action="" method="post">
+    <label for="plato2">Plato 2: </label>
+    <input type="text" name="plato2"> 
+    <input type="submit" name="enviar" value="Enviar">
+</form>
+</section>
 
-            <input type="submit" name="enviar" value="Enviar">
-        </form>
-    </section>
-</main>
+<?php
+if (isset($_POST["enviarPlato2"])) {
+    $plato2 = $_POST["plato2"];
+}
+?>

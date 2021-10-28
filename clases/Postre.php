@@ -1,8 +1,7 @@
 <section>
     <form action="" method="post">
         <label for="postre">Postre: </label>
-        <input type="text" name="postre"> <br> <br>
-
-        <input type="submit" name="enviar" value="Enviar">
+        <input type="text" name="postre">
+        <input type="submit" name="enviarPostre" value="Enviar">
     </form>
 </section>
