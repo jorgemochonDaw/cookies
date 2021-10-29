@@ -9,6 +9,10 @@ class Cookies
         setcookie("plato1", $plato1);
     }
 
+    function borrar() {
+         unset($_COOKIE['plato1']);
+    }
+
     function mostrarPlato1()
     {
         return "Plato1: " . $_COOKIE["plato1"];

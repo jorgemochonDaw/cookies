@@ -8,13 +8,18 @@
 </section>
 
 <?php
-require './vendor/autoload.php';
+require './../vendor/autoload.php';
 
 use App\Cookies;
 
 $cookie = new Cookies();
-if (isset($_POST["enviarPlato1"])) {
-    $plato1 = $_POST["plato1"];
-    $cookie->guardarPlato1($plato1);
+
+if (isset($_REQUEST["enviarPlato1"])) {
+    $plato1 = $_REQUEST["plato1"];
+    if(empty($plato1) == 1) {
+        $cookie->borrar();
+    } else {
+        $cookie->guardarPlato1($plato1);
+    }
 }
 ?>

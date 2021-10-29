@@ -3,7 +3,8 @@
         <label for="plato2">Plato 2: </label>
         <input type="text" name="plato2">
         <input type="submit" name="enviarPlato2" value="Enviar"> <br> <br>
-        <a href="http://localhost/php/cookies/clases/Postre.php">Siguiente</a>
+        <a href="http://localhost/php/cookies/clases/Postre.php">Siguiente</a> <br>
+        <a href="http://localhost/php/cookies/clases/Plato1.php">Volver a plato 1</a>
     </form>
 </section>
 
@@ -14,8 +15,8 @@ use App\Cookies;
 
 $cookie = new Cookies();
 echo $cookie->mostrarPlato1();
-if (isset($_POST["enviarPlato2"])) {
-    $plato2 = $_POST["plato2"];
+if (isset($_REQUEST["enviarPlato2"])) {
+    $plato2 = $_REQUEST["plato2"];
     $cookie->guardarPlato2($plato2);
 }
 ?>
