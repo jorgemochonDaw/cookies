@@ -4,21 +4,33 @@ namespace App;
 
 class Cookies
 {
-    function cookiePlato1($plato1)
+    function guardarPlato1($plato1)
     {
-        setcookie("plato1_cookie", $plato1);
-        echo "Plato1: " .$_COOKIE["plato1_cookie"];
+        setcookie("plato1", $plato1);
     }
 
-    function cookiePlato2($plato2)
+    function mostrarPlato1()
     {
-        setcookie("plato2_cookie", $plato2);
-        echo "Plato2: " . $_COOKIE["plato2_cookie"];
+        return "Plato1: " . $_COOKIE["plato1"];
     }
 
-    function cookiePlato3($postre)
+    function guardarPlato2($plato2)
     {
-        setcookie("postre_cookie", $postre);
-        echo "Postre: " . $_COOKIE["postre"];
+        setcookie("plato2", $plato2);
+    }
+
+    function mostrarPlato2()
+    {
+        return  "Plato2: " . $_COOKIE["plato2"];
+    }
+
+    function guardarPostre($postre)
+    {
+        setcookie("postre", $postre);
+    }
+
+    function mostrarPostre()
+    {
+        return   "Postre: " . $_COOKIE["postre"];
     }
 }
