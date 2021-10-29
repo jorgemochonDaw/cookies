@@ -17,6 +17,10 @@ $cookie = new Cookies();
 echo $cookie->mostrarPlato1();
 if (isset($_REQUEST["enviarPlato2"])) {
     $plato2 = $_REQUEST["plato2"];
+    if(empty($plato2) == 1) {
+        $cookie->borrar2();
+    } else {
     $cookie->guardarPlato2($plato2);
+    }
 }
 ?>

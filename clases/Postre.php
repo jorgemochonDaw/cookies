@@ -20,5 +20,10 @@ echo $cookie->mostrarPlato2();
 if (isset($_REQUEST["enviarPostre"])) {
     $postre = $_REQUEST["postre"];
     $cookie->guardarPostre($postre);
+    if (empty($postre) == 1) {
+        $cookie->borrarPostre();
+    } else {
+        $cookie->guardarPostre($postre);
+    }
 }
 ?>

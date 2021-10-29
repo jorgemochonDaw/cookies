@@ -9,8 +9,9 @@ class Cookies
         setcookie("plato1", $plato1);
     }
 
-    function borrar() {
-         unset($_COOKIE['plato1']);
+    function borrar1()
+    {
+        setcookie("plato1", "No has escrito el plato 1");
     }
 
     function mostrarPlato1()
@@ -23,6 +24,11 @@ class Cookies
         setcookie("plato2", $plato2);
     }
 
+    function borrar2()
+    {
+        setcookie("plato2", "No has escrito el plato 2");
+    }
+
     function mostrarPlato2()
     {
         return  "Plato2: " . $_COOKIE["plato2"];
@@ -32,6 +38,12 @@ class Cookies
     {
         setcookie("postre", $postre);
     }
+
+    function borrarPostre()
+    {
+        setcookie("postre", "No has escrito el postre");
+    }
+
 
     function mostrarPostre()
     {

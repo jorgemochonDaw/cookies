@@ -17,7 +17,7 @@ $cookie = new Cookies();
 if (isset($_REQUEST["enviarPlato1"])) {
     $plato1 = $_REQUEST["plato1"];
     if(empty($plato1) == 1) {
-        $cookie->borrar();
+        $cookie->borrar1();
     } else {
         $cookie->guardarPlato1($plato1);
     }
